@@ -1,0 +1,41 @@
+title = "Login"
+url = "/login"
+layout = "auth"
+==
+<div class="card">
+	<div class="card-body">
+		<h4 class="card-title">Login</h4>
+		<form>
+			<div class="form-group">
+				<label for="email">E-Mail Address</label>
+				<input id="email" type="email" class="form-control" name="email" required="" autofocus="">
+			</div>
+
+			<div class="form-group">
+				<label for="password">Password
+				</label>
+				<input id="password" type="password" class="form-control" name="password" required="">
+				<div class="text-right">
+					<a href="{{ 'password-reset' | page }}" class="small">
+						Forgot Your Password?
+					</a>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="form-check position-relative mb-2">
+					<input type="checkbox" class="form-check-input d-none" id="remember" name="remember">
+					<label class="checkbox checkbox-xxs form-check-label ml-1" for="remember"
+						   data-icon="&#xe936">Remember Me</label>
+				</div>
+			</div>
+
+			<div class="form-group no-margin">
+				<a href="{{ 'home' | page }}" class="btn btn-primary btn-block">Sign In</a>
+			</div>
+			<div class="text-center mt-3 small">
+				Don't have an account? <a href="{{ 'register' | page }}">Sign Up</a>
+			</div>
+		</form>
+	</div>
+</div>

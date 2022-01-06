@@ -1,0 +1,62 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title -->
+    <title>{{ this.page.title }} | Graindashboard UI Kit</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.ico' | theme }}">
+
+    <!-- Template -->
+    <link href="{{ 'assets/css/graindashboard.css' | theme }}" rel="stylesheet">
+
+    {% styles %}
+</head>
+
+<body class="has-sidebar has-fixed-sidebar-and-header">
+<!-- Header -->
+{% partial 'site/header' %}
+<!-- End Header -->
+
+<main class="main">
+    <!-- Sidebar Nav -->
+    {% partial 'site/sidebar' %}
+    <!-- End Sidebar Nav -->
+
+    <div class="content">
+        <div class="py-4 px-3 px-md-4">
+            <div class="card mb-3 mb-md-4">
+                <div class="card-body">
+                    {% partial 'components/breadcrumbs' %}
+
+                    <div class="mb-3 mb-md-4 d-flex justify-content-between">
+                        <div class="h3 mb-0">{{ this.page.title }}</div>
+                    </div>
+
+                    {% page %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        {% partial 'site/footer' %}
+        <!-- End Footer -->
+    </div>
+</main>
+
+<!-- Scripts -->
+<script src="{{ 'assets/js/graindashboard.js' | theme }}"></script>
+<script src="{{ 'assets/js/graindashboard.vendor.js' | theme }}"></script>
+
+{% framework extras %}
+{% scripts %}
+</body>
+</html>

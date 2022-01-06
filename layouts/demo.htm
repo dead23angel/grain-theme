@@ -1,0 +1,74 @@
+description = "Demo dashboard layout"
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title -->
+    <title>{{ this.page.title }} | Graindashboard UI Kit</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.ico' | theme }}">
+
+    <!-- DEMO CHARTS -->
+    <link rel="stylesheet" href="{{ 'assets/demo/chartist.css' | theme }}">
+    <link rel="stylesheet" href="{{ 'assets/demo/chartist-plugin-tooltip.css' | theme }}">
+
+    <!-- Template -->
+    <link href="{{ 'assets/css/graindashboard.css' | theme }}" rel="stylesheet">
+
+    {% styles %}
+</head>
+
+<body class="has-sidebar has-fixed-sidebar-and-header">
+<!-- Header -->
+{% partial 'site/header' %}
+<!-- End Header -->
+
+<main class="main">
+    <!-- Sidebar Nav -->
+    {% partial 'site/sidebar' %}
+    <!-- End Sidebar Nav -->
+
+    <div class="content">
+        <div class="py-4 px-3 px-md-4">
+            <div class="mb-3 mb-md-4 d-flex justify-content-between">
+                <div class="h3 mb-0">{{ this.page.title }}</div>
+            </div>
+
+            {% page %}
+        </div>
+
+        <!-- Footer -->
+        {% partial 'site/footer' %}
+        <!-- End Footer -->
+    </div>
+</main>
+
+<!-- Scripts -->
+<script src="{{ 'assets/js/graindashboard.js' | theme }}"></script>
+<script src="{{ 'assets/js/graindashboard.vendor.js' | theme }}"></script>
+
+<!-- DEMO CHARTS -->
+<script src="{{ 'assets/js/resizeSensor.js' | theme }}"></script>
+<script src="{{ 'assets/js/chartist.js' | theme }}"></script>
+<script src="{{ 'assets/js/chartist-plugin-tooltip.js' | theme }}"></script>
+<script src="{{ 'assets/js/gd.chartist-area.js' | theme }}"></script>
+<script src="{{ 'assets/js/gd.chartist-bar.js' | theme }}"></script>
+<script src="{{ 'assets/js/gd.chartist-donut.js' | theme }}"></script>
+
+<script>
+    $.GDCore.components.GDChartistArea.init('.js-area-chart');
+    $.GDCore.components.GDChartistBar.init('.js-bar-chart');
+    $.GDCore.components.GDChartistDonut.init('.js-donut-chart');
+</script>
+
+{% framework extras %}
+{% scripts %}
+</body>
+</html>

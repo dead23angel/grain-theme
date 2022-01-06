@@ -1,0 +1,58 @@
+description = "Authentication layout"
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title -->
+    <title>{{ this.page.title }} | Graindashboard UI Kit</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.ico' | theme }}">
+
+    <!-- Template -->
+    <link href="{{ 'assets/css/graindashboard.css' | theme }}" rel="stylesheet">
+
+    {% styles %}
+</head>
+
+<body>
+<main class="main">
+    <div class="content">
+        <div class="container-fluid pb-5">
+            <div class="row justify-content-md-center">
+                <div class="card-wrapper col-12 col-md-4 mt-5">
+                    <div class="brand text-center mb-3">
+                        <a href="{{ 'home' | page }}">
+                            <img src="{{ 'assets/images/logo.png' | theme }}" alt="Graindashboard">
+                        </a>
+                    </div>
+
+                    {% page %}
+
+                    <footer class="footer mt-3">
+                        <div class="container-fluid">
+                            <div class="footer-content text-center small">
+                                <span class="text-muted">&copy; {{ 'now' | date('Y') }} Graindashboard. All Rights Reserved.</span>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Scripts -->
+<script src="{{ 'assets/js/graindashboard.js' | theme }}"></script>
+<script src="{{ 'assets/js/graindashboard.vendor.js' | theme }}"></script>
+
+{% framework extras %}
+{% scripts %}
+</body>
+</html>

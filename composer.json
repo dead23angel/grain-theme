@@ -1,0 +1,30 @@
+{
+    "name": "cwteam/grain-theme",
+    "type": "october-theme",
+    "description": "October CMS theme",
+    "keywords": ["october", "cms", "theme", "grain", "graindashboard"],
+    "authors": [
+        {
+            "name": "Max Kostinevich",
+            "homepage": "https://maxkostinevich.com/",
+            "role": "Creator"
+        },
+        {
+            "name": "Ivan Gorokhov",
+            "email": "ivan@gorokhov.pw",
+            "role": "Adapter for October CMS"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0|^8.1",
+        "composer/installers": "~1.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

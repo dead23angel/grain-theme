@@ -1,0 +1,11 @@
+/*------------------------------------
+  File for your custom SCSS style
+------------------------------------*/
+
+.image {
+    &:hover {
+        border-color: $primary;
+        color: $white;
+        opacity: .5;
+    }
+}
