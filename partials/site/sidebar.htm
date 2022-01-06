@@ -45,7 +45,7 @@
             </a>
 
             <!-- Users: subUsers -->
-            <ul id="subUsers" class="side-nav-menu side-nav-menu-second-level mb-0">
+            <ul id="subUsers" class="side-nav-menu side-nav-menu-second-level mb-0" {% if this.page.id == 'users' or this.page.id == 'create-user' %}style="display: block;"{% endif %}>
                 <li class="side-nav-menu-item {% if this.page.id == 'users' %}active{% endif %}">
                     <a class="side-nav-menu-link" href="{{ 'users' | page }}">All Users</a>
                 </li>
